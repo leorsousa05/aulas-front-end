@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout</title>
+<style>
+
+/* Regras de uso geral
+O que codificamos aqui, é tdo que será usado no site não importando muito o tamanho da tela. Neste momento não usamos Media Queries.*/
+
+*, *::before, *::after 
+{ 
+    box-sizing: border-box;
+}
+
+/* IMPORTANTE PARA O USO DA MEDIDA REM */
+html
+{
+    font-size: 16px;
+}
+
+body 
+{ 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+#container
+{
+    box-shadow: black 0 0 5px;
+    padding: 5px;
+}
+
+header
+{
+    background-color: rgb(114, 27, 255);
+    text-align: center;
+    height: 100px;
+}
+
+/* CSS Reset: Remoção de valores padrão */
+
+body, h1, h2, p
+{
+    margin: 0;
+    padding: 0;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.2rem; }
+p { font-size: 1.1rem; }
+
+nav { background-color: rgb(182, 137, 255); }
+
+section { padding: 5px; }
+
+#coluna-um { background-color: rgb(182, 137, 255); }
+#coluna-dois { background-color: purple;}
+#coluna-tres { background-color: #4e664e;}
+
+footer { background-color: grey; text-align: center;}
+
+/* Regras para Design Responsivo */
+
+/* Primeira Media query: Telas a partir de 700px de largura */
+@media screen and (min-width: 700px)
+{
+    html
+    {
+        font-size: 18px;
+    }
+
+    header
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    main
+    {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    section { width: 50%;}
+}
+
+/* EXERCÍCIO: Crie uma nova edia query para telas a partir de 822px, que faça as seguintes alterações:
+
+- Tamanho geral de fonte: 20px
+- Largura das colunas: 33.33%
+- Limite o tamanho da container para até 1200px e também a centralize*/
+
+@media screen and (min-width: 822px)
+{
+    html
+    {
+        font-size: 20px;
+    }
+
+    /* #coluna-um, #coluna-dois, #coluna-tres 
+    { width: 33.33% } */
+
+    section{
+        width: 33.33%;
+    }
+
+    #container
+    {
+        max-width: 1200px;
+    }
+    
+    body
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* main
+    {
+        flex-wrap: wrap;
+    } */
+}
+
+</style>
+</head>
+<body>
+    <div id="container">
+        <!-- Cabeçalho -->
+        <header>
+
+            <h1>Site...</h1>
+            <nav>
+                <a href="">Link 1</a>
+                <a href="">Link 2</a>
+                <a href="">Link 3</a>
+            </nav>
+
+        </header>
+
+        <!-- Conteúdo -->
+        <main>
+
+            <section id="coluna-um">
+
+                <h2>Um</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eos optio et ex beatae, voluptate asperiores quam? Dolores, debitis tempore eos animi minus in, iste, pariatur ducimus rem aspernatur nam blanditiis officia adipisci dolor. Ad repellat veritatis saepe ducimus harum reprehenderit laboriosam perspiciatis optio sunt voluptatum eos, vitae consequuntur labore.</p>
+
+            </section>
+
+            <section id="coluna-dois">
+
+                <h2>Dois</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt alias facere itaque fugit, possimus mollitia est libero minima, sequi eos, accusantium deleniti sunt culpa laboriosam eveniet. Debitis inventore optio vel voluptas minus atque. Possimus voluptatem quo nihil labore nulla, reiciendis reprehenderit? Voluptatem culpa nesciunt possimus rem officiis tempore pariatur. Corporis?</p>
+
+            </section>
+
+            <section id="coluna-tres">
+
+                <h2>Três</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, odit delectus! Minus, cum accusamus! Praesentium, consequatur ipsam voluptatum in consectetur est sit ea blanditiis iure veritatis commodi consequuntur sapiente aliquid impedit magni voluptas iste modi et hic dolorum itaque? Architecto quisquam tenetur laboriosam quia earum reprehenderit nostrum incidunt doloremque iste.</p>
+
+            </section>
+
+        </main>
+
+        <!-- Rodapé -->
+        <footer>
+
+            <p>Layout de Exemplo</p>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>

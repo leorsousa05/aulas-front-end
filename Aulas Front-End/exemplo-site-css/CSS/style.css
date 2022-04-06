@@ -1,0 +1,119 @@
+*, *::after, *::before
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    justify-content: center;
+    margin: 0;
+    background: #383a59;
+}
+
+#conteudo
+{
+    background-color: rgba(255, 255, 255, 0.089);
+    width: 90%;
+    margin: auto;
+}
+
+h1, h2, h3, p, a, li
+{
+    color: white;
+    font-family: sans-serif;
+}
+
+#intro
+{
+    text-align: center;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.texto
+{
+    text-align: center;
+    margin: 20px;
+}
+
+#header
+{
+    display: inline-block;
+    align-items: center;
+    margin: 20px;
+}
+
+header
+{
+    background-color: #1f2031;
+    display: flex;
+    justify-content: center;
+}
+
+#senac
+{
+    margin: 0px;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Seletor identificado/ID */
+
+nav
+{
+    padding: 18px;
+}
+
+#button
+{
+    display: inline-block;
+    border-radius: 3px;
+    background-color: rgb(53, 83, 107);
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+#button-p
+{
+    text-align: center;
+}
+
+nav a:hover
+{
+    color: rgb(0, 0, 0);
+}
+
+#img
+{
+    justify-items: content;
+}
+
+#destaque
+{
+    max-width: 100%;
+}
+
+#edit, #ref
+{
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* Seletor tag
+Finalidade desta regra: Tornar as imagens flexiveis*/
+#img
+{
+    text-align: center;
+}
+
+#rodape
+{
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+}
